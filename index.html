@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical AI Governance Report & Audit</title>
+    <style>
+        :root {
+            --bg-color: #f7f6f2;
+            --text-color: #1a1a1a;
+            --accent-sage: #4a6b5d;
+            --accent-rust: #b34a36;
+            --border-color: #2b2b2b;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            box-shadow: 4px 4px 0px var(--border-color);
+        }
+        header {
+            border-bottom: 2px dashed var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .meta-table {
+            width: 100%;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .meta-table td { padding: 4px 0; }
+        .meta-table td:first-child { font-weight: bold; width: 150px; color: var(--accent-sage); }
+        h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 10px; }
+        h2 { font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid var(--accent-sage); padding-left: 10px; }
+        p { margin-bottom: 15px; font-size: 1.05rem; color: #333; }
+        .status-box {
+            background-color: #fff5f5;
+            border: 1px solid var(--accent-rust);
+            padding: 15px;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+        .status-title { color: var(--accent-rust); font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .card { border: 1px solid #ccc; padding: 15px; background: #fafafa; }
+        .code-block { font-family: monospace; background: #222; color: #fff; padding: 15px; border-radius: 4px; overflow-x: auto; margin: 15px 0; font-size: 0.9rem; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 0.85rem; text-align: center; color: #666; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <table class="meta-table">
+            <tr><td>DOCUMENT ID</td><td>AUDIT-2026-READMIT-01</td></tr>
+            <tr><td>AUTHOR</td><td>Andi, Economics & Data Science Graduate</td></tr>
+            <tr><td>TARGET SYSTEM</td><td>30-Day Readmission Risk Engine</td></tr>
+            <tr><td>STATUS</td><td><span style="color:var(--accent-rust); font-weight:bold;">COMPLIANCE VERIFICATION REQUIRED</span></td></tr>
+        </table>
+        <h1>Deconstructing the Clinical AI Trust Crisis</h1>
+        <p style="font-style: italic; color: #555;">An operational engineering response to algorithmic black-boxes and socio-economic bias in healthcare deployment pipelines.</p>
+    </header>
+
+    <section>
+        <h2>1. The Core Thesis</h2>
+        <p>Medical professionals routinely reject machine learning models because raw risk percentages offer zero clinical context. If a model calculates a 78% readmission probability but fails to declare its underlying features, executing targeted care management is impossible. This portfolio piece resolves the deployment bottleneck by treating model explainability (SHAP) and demographic equity (4/5ths Rule Bias Auditing) as infrastructure requirements, not documentation afterthoughts.</p>
+    </section>
+
+    <section>
+        <h2>2. Live Governance Metrics</h2>
+        <div class="status-box">
+            <div class="status-title">⚠️ ALGORITHMIC AUDIT DISPOSITION</div>
+            <div>Disparate Impact Ratio: <strong>0.762</strong> (CRITICAL FAILURE)</div>
+            <div>Threshold Requirement: 0.800 - 1.250 (4/5ths Rule Standard)</div>
+            <div>Finding: Pipeline detected an unmitigated systemic selection bias against Dual-Eligible (low-income) populations due to underlying healthcare utilization proxy vectors.</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Technical Architecture Overview</h2>
+        <p>The system relies on a three-tier automated verification pipeline built entirely in production-grade Python and SQL:</p>
+        <div class="grid">
+            <div class="card">
+                <strong style="color:var(--accent-sage);">I. Ingestion & Transformation</strong>
+                <p style="font-size:0.9rem; margin-top:5px;">Simulates longitudinal Centers for Medicare & Medicaid Services (CMS) data profiles with pre-baked selection bias mechanisms to test auditing frameworks.</p>
+            </div>
+            <div class="card">
+                <strong style="color:var(--accent-sage);">II. SHAP Attribution Matrix</strong>
+                <p style="font-size:0.9rem; margin-top:5px;">Extracts local game-theoretic feature importances for individual patients, converting an uninterpretable Random Forest into explicit feature directions for clinicians.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Local Setup & Implementation Instruction</h2>
+        <p>To run the interactive trust dashboard and execute the statistical fairness evaluation pipeline locally on your system, run the following commands:</p>
+        <div class="code-block">
+# Clone the repository structure
+git clone https://github.com/YOUR_GITHUB_USERNAME/healthcare-readmission-trust.git
+cd healthcare-readmission-trust
+
+# Install core runtime dependencies
+pip install -r requirements.txt
+
+# Run the bias auditing processing engine
+python pipeline.py
+
+# Launch the interactive clinical validation interface
+streamlit run app.py
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed by Andi • Built for Modern Healthcare Analytics and Data Engineering Roles</p>
+    </footer>
+</div>
+
+</body>
+</html>
